@@ -1,8 +1,6 @@
 name: Create Cypress report
-on:
-  push:
-    branches:
-      - 'master'
+on: [push, workflow_dispatch]
+
 jobs:
   cypress-e2e-chrome81:
   name: Run on Chrome 81
