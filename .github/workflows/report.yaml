@@ -3,9 +3,8 @@ on: [push, workflow_dispatch]
 
 jobs:
   cypress-run:
-  name: Run on Chrome 81
-  runs-on: ubuntu-18.04
-  container: cypress/browsers:node12.16.2-chrome81-ff75
+  name: Run tests
+  runs-on: ubuntu-latest
   steps:
     - uses: actions/checkout@v2
     - name: Install a project with a clean slate
