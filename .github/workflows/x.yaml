@@ -8,5 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - run: |
-            export RP_TOKEN="hello"`
-            echo $RP_TOKEN
+           export RP_TOKEN="hello"
+           echo $RP_TOKEN
+           echo RP_TOKEN
