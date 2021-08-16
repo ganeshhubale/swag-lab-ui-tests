@@ -1,5 +1,9 @@
 name: Create Cypress report
-on: [push, workflow_dispatch]
+on: 
+  workflow_dispatch:
+  schedule:
+      # At the end of every day
+    - cron: 0 0 * * *
 
 jobs:
   cypress-run:
