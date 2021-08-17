@@ -15,4 +15,4 @@ jobs:
            echo $RP_TOKEN
            echo RP_TOKEN
            echo ${{secrets.url}}
-           npx cypress run --spec cypress/integration/examples/FirstTest.js --env url=${{secrets.url}}
+           npx cypress run --spec cypress/integration/FirstTest.js --env url=${{secrets.url}}
