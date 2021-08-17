@@ -1,8 +1,10 @@
 /// <reference  types="Cypress" />
 
+const url=Cypress.env("url")
+
 context("Window", () => {
     beforeEach(() => {
-        cy.visit("https://scrolltest.com")
+        cy.visit(url)
     })
 
     it('Open in mac 15', () => {

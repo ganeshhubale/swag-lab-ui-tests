@@ -1,8 +1,11 @@
 /// <reference types="cypress" />
 
+const url = Cypress.env("url")
+
 context('Actions', () => {
   beforeEach(() => {
-    cy.visit('https://example.cypress.io/commands/actions')
+
+    cy.visit(url)
   })
 
   // https://on.cypress.io/interacting-with-elements
