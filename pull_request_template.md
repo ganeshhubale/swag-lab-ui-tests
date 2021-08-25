@@ -1,7 +1,0 @@
-- Pull request testing GitHub action
-    - Add `RFR` label while creating pull request
-- Request review
-    - reviewr1
-    - reviwer2
-- Optional:
-    - Add `RFR` or `WIP` as per your pr progress
