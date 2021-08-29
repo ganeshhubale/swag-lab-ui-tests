@@ -1,17 +1,19 @@
 name: Regression tests
 on:
   push:
-    - 'master'
+    branches:
+      - master
   workflow_dispatch:
   schedule:
     - cron: "0 * * * *"
 
 jobs:
   tests:
+    name: Regression test suite
     runs-on: ubuntu-latest
     steps:
       - name: Checkout to master branch
-        run: actions/checkout@v2
+        uses: actions/checkout@v2
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
