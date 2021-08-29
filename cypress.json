@@ -1,6 +1,15 @@
 {
+  "viewportWidth": 1280,
+  "viewportHeight": 880,
+  "chromeWebSecurity": false,
+  "env": {
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "hostUrl": "https://www.saucedemo.com/"
+  },
+
   "reporter": "cypress-multi-reporters",
-    "reporterOptions": {
-        "configFile": "reporter-config.json"
-    }
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  }
 }
