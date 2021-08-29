@@ -1,4 +1,4 @@
-- This project uses has automated test scenarios for website - https://www.saucedemo.com/
+- This project has automated test scenarios for website - https://www.saucedemo.com/
 
 - Used Cypress automation framework with TypeScript programming language for automation
 
