@@ -1,7 +1,12 @@
 ### Automation using Cypress automation framework
 
 - This project has automated test scenarios for website - https://www.saucedemo.com/
-- Used Cypress automation framework with TypeScript programming language for automation
+- Used **Cypress** automation framework with **TypeScript** programming language for automation
+- Added **CI workflows**
+    - GitHub action for Pull request testing
+        - https://github.com/AutomationFrameworks/Cypress/blob/master/.github/workflows/pull-request-tester.yaml
+    - GitHub action for regression testing
+        - https://github.com/AutomationFrameworks/Cypress/blob/master/.github/workflows/regression-cron.yaml
 
 #### Steps to install project and run tests locally
 
