@@ -3,9 +3,9 @@
   "viewportHeight": 880,
   "chromeWebSecurity": false,
   "env": {
-    "username": "standard_user",
-    "password": "secret_sauce",
-    "hostUrl": "https://www.saucedemo.com/"
+    "username": "",
+    "password": "",
+    "hostUrl": ""
   },
 
   "reporter": "cypress-multi-reporters",
