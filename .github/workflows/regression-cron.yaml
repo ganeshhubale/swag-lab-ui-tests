@@ -24,6 +24,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CYPRESS_username: ${{ secrets.USER }}
-          CYPRESS_pass: ${{ secrets.PASS }}
+          CYPRESS_password: ${{ secrets.PASS }}
           CYPRESS_hostUrl: ${{ secrets.URL }}
   
