@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Demo website automation using Cypress",
   "main": "index.js",
-  "repository": "https://github.com/AutomationFrameworks/Cypress.git",
+  "repository": "https://github.com/ganeshhubale/swag-lab-ui-tests.git",
   "dependencies": {},
   "devDependencies": {
     "cypress": "^5.1.0",
@@ -16,9 +16,5 @@
     "format": "prettier --write './**/*.{ts,js,json}'"
   },
   "author": "Ganesh Hubale",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/AutomationFrameworks/Cypress/issues"
-  },
-  "homepage": "https://github.com/AutomationFrameworks/Cypress#readme"
+  "license": "MIT"
 }
