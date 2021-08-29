@@ -1,4 +1,4 @@
-/// <reference types="cypress" />
+/// <reference types="Cypress" />
 
 import * as loginview from "../integration/views/login.view";
 import * as productview from "../integration/views/products.view";
