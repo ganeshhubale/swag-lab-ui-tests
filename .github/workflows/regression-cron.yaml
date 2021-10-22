@@ -1,29 +1,29 @@
-name: Regression tests
-on:
-  push:
-    branches:
-      - master
-  workflow_dispatch:
-  schedule:
-    - cron: "0 * * * *"
+# name: Regression tests
+# on:
+#   push:
+#     branches:
+#       - master
+#   workflow_dispatch:
+#   schedule:
+#     - cron: "0 * * * *"
 
-jobs:
-  tests:
-    name: Regression test suite
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout to master branch
-        uses: actions/checkout@v2
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
-        with:
-          record: false
-          start: npx echo "Starting regression tests"
-          config: pageLoadTimeout=100000,retries=2,video=false
-          browser: chrome
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CYPRESS_username: ${{ secrets.USER }}
-          CYPRESS_password: ${{ secrets.PASS }}
-          CYPRESS_hostUrl: ${{ secrets.URL }}
+# jobs:
+#   tests:
+#     name: Regression test suite
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout to master branch
+#         uses: actions/checkout@v2
+#       - name: Cypress run
+#         uses: cypress-io/github-action@v2
+#         with:
+#           record: false
+#           start: npx echo "Starting regression tests"
+#           config: pageLoadTimeout=100000,retries=2,video=false
+#           browser: chrome
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#           CYPRESS_username: ${{ secrets.USER }}
+#           CYPRESS_password: ${{ secrets.PASS }}
+#           CYPRESS_hostUrl: ${{ secrets.URL }}
   
