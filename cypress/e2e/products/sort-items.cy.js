@@ -3,7 +3,7 @@ const inventoryPage = require("../../pages/inventoryPage")
 describe("Sort product items", () => {
     beforeEach("login", () => {
         cy.login()
-    })
+    });
 
     afterEach(() => {
         cy.clearCookies();
@@ -25,7 +25,7 @@ describe("Sort product items", () => {
             const sortedNames = [...itemNames].sort();
             expect(itemNames).to.deep.equal(sortedNames);
         });
-    })  
+    });
 
     it("Verify sort items by Name: Z-A", () => {
         inventoryPage.sort_by_name("za")
@@ -41,7 +41,7 @@ describe("Sort product items", () => {
             const sortedNames = [...itemNames].sort((a,b) => b.localeCompare(a));
             expect(itemNames).to.deep.equal(sortedNames);
         });
-    })
+    });
 
     it("Verify sort items by price: low to high", () => {
         inventoryPage.sort_by_price("lohi")
@@ -57,7 +57,7 @@ describe("Sort product items", () => {
             const sortedPrices = [...itemPrices].sort((a, b) => a - b);;
             expect(itemPrices).to.deep.equal(sortedPrices);
         });
-    })
+    });
 
     it("Verify sort items by price: high to low", () => {
         inventoryPage.sort_by_price("hilo")
@@ -73,5 +73,5 @@ describe("Sort product items", () => {
             const sortedPrices = [...itemPrices].sort((a, b) => b - a);
             expect(itemPrices).to.deep.equal(sortedPrices);
         });
-    })
+    });
 });
