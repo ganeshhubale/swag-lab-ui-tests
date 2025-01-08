@@ -1,27 +1,43 @@
-name: Regression tests
+name: Cypress Tests
+
 on:
   push:
     branches:
       - master
-  workflow_dispatch:
-#   schedule:
-#     - cron: "0 0 1 * *" // At 00:00 on day-of-month 1.
+  pull_request:
 
 jobs:
-  tests:
-    name: Regression test suite
+  cypress:
+    name: Run Cypress Tests
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout to master branch
-        uses: actions/checkout@v2
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
+      # Step 1: Checkout the code
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          record: false
-          start: npx echo "Starting regression tests"
-          config: pageLoadTimeout=100000,retries=2,video=false
+          node-version: 18
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm ci
+
+      # Step 4: Run Cypress tests
+      - name: Run Cypress
+        uses: cypress-io/github-action@v5
+        with:
           browser: chrome
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CYPRESS_username: ${{ secrets.USER }}
-          CYPRESS_password: ${{ secrets.PASS }}
+          headless: true
+          video: false
+
+      # Step 5: Upload artifacts (optional, for videos/screenshots)
+      - name: Upload artifacts
+        if: always() # Ensure artifacts are uploaded even if the tests fail
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-artifacts
+          path: cypress/videos/
