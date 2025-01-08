@@ -26,15 +26,15 @@
 
 // Login
 Cypress.Commands.add("login", () => {
-    const username = Cypress.env('username');
-    const password = Cypress.env('password');
+  const username = Cypress.env("username");
+  const password = Cypress.env("password");
 
-    cy.visit('/');
-    cy.get("input[id=user-name]").clear().type(username)
-    cy.get("input[id=password]").clear().type(password)
+  cy.visit("/");
+  cy.get("input[id=user-name]").clear().type(username);
+  cy.get("input[id=password]").clear().type(password);
 
-    cy.get("input[id=login-button]").click()
+  cy.get("input[id=login-button]").click();
 
-    // Verify successful login
-    cy.url().should('include', '/inventory');
-})
+  // Verify successful login
+  cy.url().should("include", "/inventory");
+});

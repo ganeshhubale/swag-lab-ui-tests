@@ -1,11 +1,11 @@
 {
-    "sauceLabsBackpack": {
+  "sauceLabsBackpack": {
     "name": "Sauce Labs Backpack"
-    },
-    "sauceLabsBikelight": {
+  },
+  "sauceLabsBikelight": {
     "name": "Sauce Labs Bike Light"
-    },
-    "testallthings": {
+  },
+  "testallthings": {
     "name": "Test.allTheThings() T-Shirt (Red)"
-    }
+  }
 }
