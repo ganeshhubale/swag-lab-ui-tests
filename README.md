@@ -5,7 +5,7 @@ This project automates test scenarios for the website - [https://www.saucedemo.c
 - **Framework**: Cypress Automation Framework
 - **Language**: JavaScript
 - **CI Workflows**:
-  - **Pull Request Testing**: [pull-request-tester.yaml](https://github.com/ganeshhubale/swag-lab-ui-tests/blob/master/.github/workflows/pull-request-tester.yaml)
+  - **Check code formatting**: [pull-request-tester.yaml](https://github.com/ganeshhubale/swag-lab-ui-tests/blob/master/.github/workflows/code-format.yaml)
   - **Regression Testing**: [regression-cron.yaml](https://github.com/ganeshhubale/swag-lab-ui-tests/blob/master/.github/workflows/regression-cron.yaml)
 
 ## Steps to Install Project and Run Tests Locally

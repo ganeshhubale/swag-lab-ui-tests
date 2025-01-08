@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-  pull_request:
 
 jobs:
   cypress:
@@ -33,6 +32,9 @@ jobs:
           browser: chrome
           headless: true
           video: false
+        env:
+          USERNAME: ${{ secrets.USER }}
+          PASSWORD: ${{ secrets.PASS }}
 
       # Step 5: Upload artifacts (optional, for videos/screenshots)
       - name: Upload artifacts
