@@ -1,20 +1,21 @@
 {
   "name": "swag-lab-ui-tests",
   "version": "1.0.0",
-  "description": "Demo website automation using Cypress",
-  "main": "index.js",
-  "repository": "https://github.com/ganeshhubale/swag-lab-ui-tests.git",
-  "dependencies": {},
-  "devDependencies": {
-    "cypress": "^5.1.0",
-    "@testing-library/cypress": "^7.0.5",
-    "prettier": "^2.2.1",
-    "typescript": "^4.2.4"
-  },
+  "description": "",
+  "main": "cypress.config.js",
   "scripts": {
-    "check": "prettier --check './**/*.{ts,js,json}'",
-    "format": "prettier --write './**/*.{ts,js,json}'"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "CYPRESS_CRASH_REPORTS=false cypress open",
+    "cypress:run": "CYPRESS_CRASH_REPORTS=false cypress run"
   },
-  "author": "Ganesh Hubale",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ganeshhubale/swag-lab-ui-tests"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.17.0"
+  }
 }
