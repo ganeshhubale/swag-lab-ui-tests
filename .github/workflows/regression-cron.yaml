@@ -33,8 +33,8 @@ jobs:
           headless: true
           video: false
         env:
-          USERNAME: ${{ secrets.USER }}
-          PASSWORD: ${{ secrets.PASS }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASS }}
 
       # Step 5: Upload artifacts (optional, for videos/screenshots)
       - name: Upload artifacts
