@@ -31,7 +31,7 @@ jobs:
         with:
           browser: chrome
           headless: true
-          video: false
+          config: video=false
         env:
           username: ${{ secrets.USER }}
           password: ${{ secrets.PASS }}
