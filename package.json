@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cypress:open": "CYPRESS_CRASH_REPORTS=false cypress open",
-    "cypress:run": "CYPRESS_CRASH_REPORTS=false cypress run"
+    "cypress:run": "CYPRESS_CRASH_REPORTS=false cypress run",
+    "check": "prettier --check ."
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.17.0"
+    "cypress": "^13.17.0",
+    "prettier": "^3.4.2"
   }
 }

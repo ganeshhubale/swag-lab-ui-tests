@@ -1,13 +1,19 @@
-# name: Code formatting
-# on: [push, pull_request]
+name: Code Formatting
 
-# jobs:
-#   build:
-#     name: Prettier
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v1
-#       - name: Install NPM
-#         run: npm install .
-#       - name: Check code formatting
-#         run: npm run check
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    name: Prettier
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Check code formatting
+        run: npm run check
