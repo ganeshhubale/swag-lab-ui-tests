@@ -31,6 +31,7 @@ This project automates test scenarios for the website - [https://www.saucedemo.c
 ## Test Cases Automated
 
 ### 1. **Authentication Scenarios**
+
 - Login to Swag Labs application.
   - Should retain session after page reload.
   - Should show an error message on empty fields.
@@ -39,6 +40,7 @@ This project automates test scenarios for the website - [https://www.saucedemo.c
   - Should log out after session expires.
 
 ### 2. **Verify Sorting Functionality**
+
 - **Name: A-Z**
   - Navigate to the inventory page.
   - Select "Name (A to Z)" from the sort dropdown.
@@ -57,6 +59,7 @@ This project automates test scenarios for the website - [https://www.saucedemo.c
   - Verify items are sorted in descending order of their prices.
 
 ### 3. **Cart Functionality**
+
 - **Add a Single Item to the Cart**
   - Navigate to the inventory page.
   - Click "Add to Cart" for an item.
@@ -82,6 +85,7 @@ This project automates test scenarios for the website - [https://www.saucedemo.c
   - Verify the cart count and items persist after the reload.
 
 ### 4. **Checkout Functionality**
+
 - **Proceed to Checkout (Standard User)**
   - Add items to the cart.
   - Click the cart icon and then "Checkout."

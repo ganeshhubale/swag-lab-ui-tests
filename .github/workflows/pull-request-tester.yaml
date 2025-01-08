@@ -1,27 +1,27 @@
-# name: Pull request test
-# on: [pull_request]
+name: Pull request test
+on: [pull_request]
 
-# jobs:
-#   pull-request-test-run:
-#     name: Test run
-#     runs-on: ubuntu-latest
-#     steps:
-#         # Checkout to pull request branch
-#       - name: Checkout
-#         uses: actions/checkout@v2
-#         # Install NPM dependencies
-#       - name: Install NPM
-#         run: npm install .
-#         # Get all the files added to pull request
-#       - id: file_changes
-#         uses: jitterbit/get-changed-files@v1
-#         with:
-#           format: 'json'
-#         # Create event to generate ouput of comma separated test files only
-#       - id: event
-#         run: |
-#           test_files=`python3 -c 'print(",".join([file for file in ${{ steps.file_changes.outputs.all }} if ".test.ts" in file]))'`
-#           echo "::set-output name=tests::$test_files"
-#       - name: Run pull request test cases
-#         if: ${{ steps.event.outputs.tests }}
-#         run: npx cypress run --spec ${{ steps.event.outputs.tests }} --env username=${{ secrets.USER }},password=${{ secrets.PASS }},hostUrl=${{ secrets.URL }} --config video=false
+jobs:
+  pull-request-test-run:
+    name: Test run
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout to pull request branch
+      - name: Checkout
+        uses: actions/checkout@v2
+        # Install NPM dependencies
+      - name: Install NPM
+        run: npm install .
+        # Get all the files added to pull request
+      - id: file_changes
+        uses: jitterbit/get-changed-files@v1
+        with:
+          format: "json"
+        # Create event to generate output of comma separated test files only
+      - id: event
+        run: |
+          test_files=`python3 -c 'print(",".join([file for file in ${{ steps.file_changes.outputs.all }} if ".test.ts" in file]))'`
+          echo "::set-output name=tests::$test_files"
+      - name: Run pull request test cases
+        if: ${{ steps.event.outputs.tests }}
+        run: npx cypress run --spec ${{ steps.event.outputs.tests }} --env username=${{ secrets.USER }},password=${{ secrets.PASS }} --config video=false
