@@ -1,5 +1,7 @@
 const items = require("../../fixtures/items.json");
 const cart = require("../../pages/cartPage");
+const inventory = require("../../pages/inventoryPage");
+
 
 describe("Cart Functionality", () => {
 
@@ -16,10 +18,10 @@ describe("Cart Functionality", () => {
         // Choose item and Click on it. For example - Item name - Sauce Labs Backpack
         const itemName = items.sauceLabsBackpack.name;
 
-        cart.addSingleItem(itemName);
+        inventory.addSingleItem(itemName);
 
         // Go to cart
-        cart.goToCart();
+        inventory.goToCart();
 
         // Confirm only one item in cart
         cy.get("div[data-test=inventory-item-name]").then((items) => {
@@ -34,10 +36,10 @@ describe("Cart Functionality", () => {
         // Add multiple items to cart
         const itemNames = Object.values(items).map(item => item.name);
 
-        cart.addMultipleItems(itemNames);
+        inventory.addMultipleItems(itemNames);
         
         // Go to cart
-        cart.goToCart();
+        inventory.goToCart();
 
         // Confirm  multiple items added in cart
         cy.get("div[data-test=inventory-item-name]").then((items) => {
@@ -51,10 +53,10 @@ describe("Cart Functionality", () => {
         // Add multiple items to cart
         const itemNames = Object.values(items).map(item => item.name);
 
-        cart.addMultipleItems(itemNames);
+        inventory.addMultipleItems(itemNames);
         
         // Go to cart
-        cart.goToCart();
+        inventory.goToCart();
 
         // Remove an item from cart and check count reduced
         cart.removeFromCart([itemNames[0]]);
@@ -71,10 +73,10 @@ describe("Cart Functionality", () => {
         // Add multiple items to cart
         const itemNames = Object.values(items).map(item => item.name);
 
-        cart.addMultipleItems(itemNames);
+        inventory.addMultipleItems(itemNames);
         
         // Go to cart
-        cart.goToCart();
+        inventory.goToCart();
 
         // Remove an item from cart and check count reduced
         cart.removeFromCart(itemNames);
@@ -87,13 +89,13 @@ describe("Cart Functionality", () => {
         // Add multiple items to cart
         const itemNames = Object.values(items).map(item => item.name);
 
-        cart.addMultipleItems(itemNames);
+        inventory.addMultipleItems(itemNames);
 
         // Reload the inventory
         cy.reload();
 
         // Go to cart
-        cart.goToCart();
+        inventory.goToCart();
 
         // Confirm total count of items is equal to total items in cart
         cy.get("div[data-test=inventory-item-name]").then((items) => {
