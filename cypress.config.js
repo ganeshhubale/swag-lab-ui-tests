@@ -12,8 +12,8 @@ module.exports = defineConfig({
     },
   },
   env: {
-    username: "",
-    password: "",
+    username: process.env.username,
+    password: process.env.password,
   },
   viewportWidth: 1280,
   viewportHeight: 720,
